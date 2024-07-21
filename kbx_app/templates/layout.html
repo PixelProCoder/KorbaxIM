@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	
+    <head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<meta name="description" content="#">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap core CSS -->
+		<link href="{% static 'css/lib/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+		<!-- Swipe core CSS -->
+		<link href="{% static 'css/swipe.min.css' %}" type="text/css" rel="stylesheet">
+		<!-- Favicon -->
+		<link href="{% static 'img/favicon.png' %}" type="image/png" rel="icon">
+		</head>
+		<body>
+			<main>
+            	<div class="layout">
+					{% block pagecontent %}
+						
+                	{% endblock %}
+            	</div> <!-- Layout -->
+        </main>
+        <!-- Bootstrap/Korbax core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+		<script src="{% static 'js/vendor/popper.min.js' %}"></script>
+		<script src="{% static 'js/swipe.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/vendor/jstorage.min.js' %}"></script>
+		<script src="{% static 'js/vendor/strophe.js' %}"></script>
+		<script src="{% static 'js/vendor/strophe.rebind.js' %}"></script>
+		<script src="{% static 'js/kbx.js' %}"></script>
+		<!-- <script>
+			function scrollToBottom(el) { el.scrollTop = el.scrollHeight; }
+			scrollToBottom(document.getElementById('content'));
+		</script> -->
+    </body>
+
+</html>
